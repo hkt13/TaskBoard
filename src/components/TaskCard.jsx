@@ -26,12 +26,12 @@ const TaskCard = ({task}) => {
             setTaskToBeEdit(task)
             }}>Edit</button>
           <hr />
-          <button onClick={()=>{
+          {task.status!=='Completed' && <button onClick={()=>{
             setShowEdel(false)
             setShowDeleteTask(true)
             setTaskToBeEdit(task)
 
-          }}>Delete</button>
+          }}>Delete</button>}
         </div>)}
     </div>
     </>
